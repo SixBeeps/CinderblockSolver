@@ -9,7 +9,7 @@ using SixLabors.ImageSharp;
 class Program {  
   public static void Main (string[] args) {
 		// Load a board from file
-    string levelData = File.ReadAllText("boards/random.txt");
+    string levelData = File.ReadAllText("../boards/random.txt");
 		Board board = Board.FromString(levelData);
 
 		// Create instances for the solver and timer
@@ -28,7 +28,7 @@ class Program {
 			solved.LogSteps();
       Console.WriteLine("Rendering solution to GIF...");
   		Image render = SolutionRenderer.RenderSolution(solved);
-  		render.SaveAsGif("./test.gif");
+  		render.SaveAsGif("./solution.gif");
   		render.Dispose();
 		} else {
 			Console.WriteLine("Board not solved");

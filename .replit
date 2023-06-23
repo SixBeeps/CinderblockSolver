@@ -1,5 +1,5 @@
-run = "dotnet run"
-entrypoint = "main.cs"
+run = "cd src && dotnet run"
+entrypoint = "src/main.cs"
 
 [env]
 DOTNET_NOLOGO = "1"
