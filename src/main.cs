@@ -9,7 +9,7 @@ using SixLabors.ImageSharp;
 class Program {  
   public static void Main (string[] args) {
 		// Load a board from file
-    string levelData = File.ReadAllText("../boards/random.txt");
+    string levelData = File.ReadAllText("../boards/square1.txt");
 		Board board = Board.FromString(levelData);
 
 		// Create instances for the solver and timer

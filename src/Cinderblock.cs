@@ -131,7 +131,10 @@ namespace Cinderblock {
 			Vector2 offset = Rules.DirectionOffset(direction);
 
 			// Can't go off edge of board
-			if (offset.X * 2 >= Width || offset.Y * 2 >= Height) return false;
+			if (me.Position.X + offset.X * 2 >= Width
+        || me.Position.Y + offset.Y * 2 >= Height
+        || me.Position.X + offset.X * 2 < 0
+        || me.Position.Y + offset.Y * 2 < 0) return false;
 
 			// Look for adjacent tether piece
 			Piece tether = null;
